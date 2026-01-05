@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -33,7 +34,6 @@ const navigationItems = [
         items: [
             { title: "目前課程", href: "/teaching/current" },
             { title: "歷年課程", href: "/teaching/history" },
-            { title: "職訓局課程", href: "/teaching/vocational" },
         ],
     },
     {
@@ -109,10 +109,12 @@ export function Navigation() {
                                 </Button>
                             )
                         )}
+                        <ThemeToggle />
                     </div>
 
                     {/* Mobile Navigation */}
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center gap-2">
+                        <ThemeToggle />
                         <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon">
