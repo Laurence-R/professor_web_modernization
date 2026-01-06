@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "教授個人網站 | 彰化師大資工系",
+    title: "張英超 | 彰化師大資工系",
     description: "專注於無線網路協定與行動通訊系統的效能優化研究",
 };
 

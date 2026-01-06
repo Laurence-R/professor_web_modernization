@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, FileText, Award } from "lucide-react";
+import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -142,10 +143,12 @@ export function SelectedPublications() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="text-center mt-12"
                 >
-                    <Button variant="outline" size="lg" className="cursor-pointer">
-                        查看完整著作列表
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link href="/research/publications">
+                        <Button variant="outline" size="lg" className="cursor-pointer">
+                            查看完整著作列表
+                            <ExternalLink className="ml-2 h-4 w-4" />
+                        </Button>
+                    </Link>
                 </motion.div>
             </div>
         </section>
