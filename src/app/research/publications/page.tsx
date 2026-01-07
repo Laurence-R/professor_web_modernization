@@ -122,6 +122,37 @@ export default function PublicationsPage() {
                     <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                         期刊論文、國際會議論文與國內會議論文集
                     </p>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="mt-6 max-w-2xl mx-auto"
+                    >
+                        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                            <p className="text-sm text-gray-700 dark:text-gray-300 text-center">
+                                💡 <span className="font-medium">完整資料查詢：</span>
+                                本頁面僅展示教授完成之論文。如需查看完整論文內容，請前往
+                                <a
+                                    href="https://ieeexplore.ieee.org/author/37640555800"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 dark:text-blue-400 hover:underline font-medium ml-1"
+                                >
+                                    IEEE Xplore
+                                </a>
+                                、
+                                <a
+                                    href="https://scholar.google.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 dark:text-blue-400 hover:underline font-medium mx-1"
+                                >
+                                    Google Scholar
+                                </a>
+                                或其他學術資料庫查詢。
+                            </p>
+                        </div>
+                    </motion.div>
                 </motion.div>
 
                 {/* 統計卡片 */}

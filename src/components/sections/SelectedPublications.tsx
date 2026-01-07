@@ -146,9 +146,14 @@ export function SelectedPublications() {
                                                 <FileText className="h-4 w-4" />
                                                 PDF
                                             </Button>
-                                            <Button size="sm" variant="outline" className="gap-2 cursor-pointer">
-                                                <ExternalLink className="h-4 w-4" />
-                                                DOI
+                                            <Button size="sm" variant="outline" className="gap-2 cursor-pointer" asChild>
+                                                <a
+                                                    href="https://ieeexplore.ieee.org/document/4711130"
+                                                    target="_blank"
+                                                >
+                                                    <ExternalLink className="h-4 w-4" />
+                                                    DOI
+                                                </a>
                                             </Button>
                                         </div>
                                     </div>
