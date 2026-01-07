@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Github, GraduationCap } from "lucide-react";
+import { Mail, MapPin, Github, GraduationCap, BookOpen, Briefcase, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function HeroSection() {
     return (
@@ -78,8 +79,14 @@ export function HeroSection() {
                                 </a>
                             </Button>
                             <Button size="lg" variant="outline" className="gap-2 cursor-pointer">
-                                <GraduationCap className="h-4 w-4" />
-                                Google Scholar
+                                <a
+                                    href="https://ieeexplore.ieee.org/author/37640555800"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <GraduationCap className="h-4 w-4" />
+                                    IEEE Xplore
+                                </a>
                             </Button>
                         </motion.div>
 
@@ -126,6 +133,47 @@ export function HeroSection() {
                         </div>
                     </motion.div>
                 </div>
+
+                {/* Statistics Dashboard */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16"
+                >
+                    <Card className="hover:shadow-lg transition-shadow">
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                            <CardTitle className="text-sm font-medium">論文著作</CardTitle>
+                            <BookOpen className="h-4 w-4 text-blue-500" />
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-2xl font-bold">182</div>
+                            <p className="text-xs text-muted-foreground">學術出版品</p>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="hover:shadow-lg transition-shadow">
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                            <CardTitle className="text-sm font-medium">研究計畫</CardTitle>
+                            <Briefcase className="h-4 w-4 text-green-500" />
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-2xl font-bold">43</div>
+                            <p className="text-xs text-muted-foreground">主持與參與計畫</p>
+                        </CardContent>
+                    </Card>
+
+                    <Card className="hover:shadow-lg transition-shadow">
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                            <CardTitle className="text-sm font-medium">榮譽與獎項</CardTitle>
+                            <Award className="h-4 w-4 text-purple-500" />
+                        </CardHeader>
+                        <CardContent>
+                            <div className="text-2xl font-bold">43</div>
+                            <p className="text-xs text-muted-foreground">個人與指導學生獲獎</p>
+                        </CardContent>
+                    </Card>
+                </motion.div>
             </div>
         </section>
     );

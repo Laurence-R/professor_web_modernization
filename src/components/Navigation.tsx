@@ -42,6 +42,8 @@ const navigationItems = [
             { title: "研究方向", href: "/research/areas" },
             { title: "論文著作", href: "/research/publications" },
             { title: "研究計畫", href: "/research/projects" },
+            { title: "榮譽與獎項", href: "/research/awards" },
+            { title: "學術服務", href: "/research/services" },
             { title: "無線與行動網路實驗室", href: "/research/lab" },
         ],
     },

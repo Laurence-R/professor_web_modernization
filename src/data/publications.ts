@@ -477,19 +477,231 @@ export const journalPublications: Publication[] = [
     },
     {
         id: 36,
+        authors: "Ing-Chau Chang, Eric Jui-Lin Lu, Shiuan-Yin Huang and Yi-Hui Chen",
+        year: 2014,
+        title: "An RDF-based P2P Overlay Network Supporting Range and Wildcard Queries",
+        venue: "Journal of Network and Computer Applications",
+        publisher: "Elsevier",
+        volume: "46",
+        pages: "124-138",
+        indexes: ["SCI"],
+        impactFactor: "3.991",
+        rank: "4/104 (COMPUTER SCIENCE, SOFTWARE ENGINEERING)",
+        type: "journal"
+    },
+    {
+        id: 37,
         authors: "Ing-Chau Chang, Chien-Hsun Li and Cheng-Fu Chou",
-        year: 2013,
+        year: 2015,
         title: "Efficient Packet Replication Control for a Geographical Routing Protocol in Sparse Vehicular Delay Tolerant Networks",
-        venue: "International Journal of Communication Systems",
-        publisher: "Wiley",
+        venue: "Scientia Iranica",
+        volume: "22",
+        issue: "4",
+        pages: "1517-1533",
         indexes: ["SCIE"],
-        impactFactor: "0.712",
-        rank: "48/78 (Telecommunications)",
+        impactFactor: "1.017",
+        rank: "66/91 (ENGINEERING, MULTIDISCIPLINARY)",
+        nscProject: "NSC100-2221-E-018-018-",
+        doi: "http://www.scientiairanica.com/en/ManuscriptDetail?mid=1878",
+        type: "journal"
+    },
+    {
+        id: 38,
+        authors: "Ching-Ru Chang, Ing-Chau Chang, Chi-Sheng Liao",
+        year: 2018,
+        title: "A Socially-Aware Trajectory-based Routing in Vehicular Social Networks",
+        venue: "International Journal of Advanced Information Technologies (IJAIT)",
+        volume: "12",
+        issue: "1",
+        pages: "28-46",
+        type: "journal"
+    },
+    {
+        id: 39,
+        authors: "Ing-Chau Chang, Chin-En Yen and Jacky Lo",
+        year: 2018,
+        title: "An Integrated Credit-Based Incentive Protocol for Symbol-Level Network-Coded Cooperative Content Distribution among Vehicular Nodes",
+        venue: "Applied Sciences",
+        volume: "8",
+        issue: "11",
+        pages: "2035",
+        indexes: ["SCIE"],
+        impactFactor: "2.7",
+        rank: "42/90, Q2 (ENGINEERING, MULTIDISCIPLINARY)",
+        doi: "https://doi.org/10.3390/app8112035",
+        type: "journal"
+    },
+    {
+        id: 40,
+        authors: "Ing-Chau Chang, Ssu-Ni Hung, Chin-En Yen",
+        year: 2019,
+        title: "Designing a Dynamic Carpooling System Integrated with the VANET-based Route-Planning Algorithm",
+        venue: "Journal of the Chinese Institute of Engineers",
+        indexes: ["SCIE"],
+        impactFactor: "1.0",
+        rank: "105/181, Q3 (ENGINEERING, MULTIDISCIPLINARY)",
+        nscProject: "MOST 104-2221-E-018-003",
+        doi: "https://doi.org/10.1080/02533839.2018.1552841",
+        type: "journal"
+    },
+    {
+        id: 41,
+        authors: "Ing-Chau Chang, Peng-Jun Hsu, Yuan-Sheng Lin, Yu-Sheng Wu, Pin-Lin Chen, Xian-Feng Lin, and Chin-En Yen",
+        year: 2019,
+        title: "Design and Implementation of an Internet-of-Things Roadside Parking System based on Raspberry Pi 3 and Bluetooth Low Energy Mesh Sensor Network",
+        venue: "Sensors and Materials",
+        volume: "31",
+        issue: "2",
+        pages: "365-376",
+        indexes: ["SCIE"],
+        impactFactor: "1.0",
+        rank: "62/76, Q4 (INSTRUMENTS & INSTRUMENTATION)",
+        type: "journal"
+    },
+    {
+        id: 42,
+        authors: "Ing-Chau Chang, Chi-Sheng Liao, Chin-En Yen",
+        year: 2021,
+        title: "The Energy-Aware Multi-UAV Dispatch and Handoff Algorithm for Maximizing the Event Communication Time in Disasters",
+        venue: "Applied Sciences",
+        volume: "11",
+        issue: "3",
+        pages: "1054",
+        indexes: ["SCIE"],
+        impactFactor: "2.5",
+        rank: "50/179, Q2 (ENGINEERING, MULTIDISCIPLINARY)",
+        doi: "https://doi.org/10.3390/app11031054",
+        type: "journal"
+    },
+    {
+        id: 43,
+        authors: "Ing-Chau Chang, Cheng-Ying Yang and Chin-En Yen",
+        year: 2022,
+        title: "The Effects of Computer Game on Preschool Children's Nutrition Knowledge and Junk Food Intake Behavior",
+        venue: "JMIR Serious Games",
+        volume: "10",
+        issue: "3",
+        pages: "e33137",
+        indexes: ["SCIE"],
+        impactFactor: "4.1",
+        rank: "26/188, Q1 (HEALTH CARE SCIENCES & SERVICES)",
+        doi: "10.2196/33137",
+        type: "journal"
+    },
+    {
+        id: 44,
+        authors: "Chen-Pin Yang, Chin-En Yen, Ing-Chau Chang",
+        year: 2022,
+        title: "A Software-Defined Directional Q-Learning Grid-based Routing Platform and Its Two-Hop Trajectory-based Routing Algorithm for Vehicular Ad Hoc Networks",
+        venue: "Sensors",
+        volume: "22",
+        issue: "21",
+        pages: "8222",
+        indexes: ["SCIE"],
+        impactFactor: "3.5",
+        rank: "134/368, Q2 (ENGINEERING, ELECTRICAL & ELECTRONIC)",
+        doi: "https://doi.org/10.3390/s22218222",
+        type: "journal"
+    },
+    {
+        id: 45,
+        authors: "Ing-Chau Chang and Chin-En Yen",
+        year: 2023,
+        title: "Application of Somatosensory Computer Game for Nutrition Education in Preschool Children",
+        venue: "Computers",
+        volume: "12",
+        issue: "1",
+        pages: "20",
+        indexes: ["SCIE"],
+        impactFactor: "4.2",
+        rank: "60/177, Q2 (COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS)",
+        doi: "https://doi.org/10.3390/computers12010020",
+        type: "journal"
+    },
+    {
+        id: 46,
+        authors: "Ing-Chau Chang, Chin-En Yen, Ya-Jing Song, Wei-Rong Chen, Xun-Mei Kuo, Ping-Hao Liao, Chunghui Kuo and Yung-Fa Huang",
+        year: 2023,
+        title: "An Effective YOLO-Based Proactive Blind Spot Warning System for Motorcycles",
+        venue: "Electronics",
+        volume: "12",
+        issue: "15",
+        pages: "3310",
+        indexes: ["SCIE"],
+        impactFactor: "2.6",
+        rank: "174/368, Q2 (ENGINEERING, ELECTRICAL & ELECTRONIC)",
+        doi: "https://doi.org/10.3390/electronics12153310",
+        type: "journal"
+    },
+    {
+        id: 47,
+        authors: "Ing-Chau Chang, Chin-En Yen, Hao-Fu Chang, Yi-Wei Chen, Ming-Tsung Hsu, Wen-Fu Wang, Da-Yi Yang and Yu-Hsuan Hsieh",
+        year: 2024,
+        title: "An Integrated YOLOv5 and Hierarchical Human-Weight-First Path Planning Approach for Efficient UAV Searching Systems",
+        venue: "Machines",
+        volume: "12",
+        pages: "65",
+        indexes: ["SCIE"],
+        impactFactor: "2.5",
+        rank: "74/182, Q2 (ENGINEERING, MECHANICAL)",
+        doi: "https://doi.org/10.3390/machines12010065",
+        type: "journal"
+    },
+    {
+        id: 48,
+        authors: "Chin-En Yen, Yu-Siang Jhang, Yu-Hsuan Hsieh, Yu-Cheng Chen, Chunghui Kuo, and Ing-Chau Chang",
+        year: 2024,
+        title: "An Integrated DQN and RF Packet Routing Framework for the V2X Network",
+        venue: "Electronics",
+        volume: "13",
+        issue: "11",
+        pages: "2099",
+        indexes: ["SCIE"],
+        impactFactor: "2.6",
+        rank: "174/368, Q2 (ENGINEERING, ELECTRICAL & ELECTRONIC)",
+        doi: "https://doi.org/10.3390/electronics13112099",
+        type: "journal"
+    },
+    {
+        id: 49,
+        authors: "Ya-Jing Song, Chin-En Yen, Yu-Hsuan Hsieh, Chunghui Kuo and Ing-Chau Chang",
+        year: 2024,
+        title: "An Intersection-Based Traffic Awareness Routing Protocol in VANETS Using Deep Reinforcement Learning",
+        venue: "Wireless Personal Communications",
+        volume: "138",
+        pages: "659-683",
+        indexes: ["SCIE"],
+        impactFactor: "2.2",
+        rank: "76/120, Q3 (TELECOMMUNICATIONS)",
+        doi: "https://doi.org/10.1007/s11277-024-11528-y",
+        type: "journal"
+    },
+    {
+        id: 50,
+        authors: "Ing-Chau Chang, Men-Yi Li, Yu-Hsuan Hsieh, Chin-En Yen",
+        year: 2024,
+        title: "A Time and Energy Efficient Multi-UAV Coverage Planning for the Search and Rescue Mission under Wind Fields",
+        venue: "WSEAS Transactions on International Journal of Environmental Engineering and Development",
+        volume: "2",
+        pages: "234-240",
+        doi: "DOI:10.37394/232033.2024.2.21",
+        type: "journal"
+    },
+    {
+        id: 51,
+        authors: "Ing-Chau Chang, Yu-Chu Hsieh, and Chin-En Yen",
+        year: 2025,
+        title: "The Prevalence of Dietary Supplement Intake and Its Correlation Factors among Infants and Preschool Children in Taiwan",
+        venue: "Nutrition and Health",
+        publisher: "SAGE",
+        indexes: ["SCOPUS"],
+        rank: "Nursing, CiteScore = 3.80, Rank-11/51, Q1",
+        doi: "https://doi.org/10.1177/02601060251369569",
         type: "journal"
     }
 ];
 
-// 國際會議論文 (24篇)
+// 國際會議論文 (51篇)
 export const internationalConferences: Publication[] = [
     {
         id: 101,
@@ -716,10 +928,235 @@ export const internationalConferences: Publication[] = [
         title: "Design and Implementation of the Travelling Time- and Energy-Efficient Android GPS Navigation App with the VANET-based A* Route Planning Algorithm",
         venue: "The 2013 International Symposium on Biometrics and Security Technologies (ISBAST'13)",
         type: "international-conference"
+    },
+    {
+        id: 125,
+        authors: "Ing-Chau Chang, Jacky Lo",
+        year: 2014,
+        title: "A Credit-based Incentive Protocol for Stimulating Network-Coded Cooperative Content Distribution in VANET",
+        venue: "2014 Eighth International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing (IMIS-2014)",
+        pages: "452-457",
+        type: "international-conference"
+    },
+    {
+        id: 126,
+        authors: "Ing-Chau Chang, Yuan-Fen Wang, Chien-Hsun Li and Cheng-Fu Chou",
+        year: 2014,
+        title: "An Efficient Two-Mode Routing Protocol in Dense and Sparse Vehicular Ad Hoc Networks",
+        venue: "2014 International Conference on Engineering and Technology Innovation (ICETI2014)",
+        type: "international-conference"
+    },
+    {
+        id: 127,
+        authors: "Ing-Chau Chang, Deng-Yong Lin, Yi-An Chen, Zong-Ye Han, Zhong-Han Xin & Xin-Hong Chen and Min-Shiang Hwang",
+        year: 2015,
+        title: "Design of the Intelligent Queueing Algorithm for Restaurant Customer Scheduling and Its Android APP Implementation",
+        venue: "2015 International Conference on Applied System Innovation (ICASI 2015)",
+        type: "international-conference"
+    },
+    {
+        id: 128,
+        authors: "Ing-Chau Chang, Ming-Han Hung and Ching-Ju Chang",
+        year: 2015,
+        title: "Novel Trajectory Routing for Efficient Controlled Replication in Vehicular Delay Tolerant Network",
+        venue: "the International Scientific Conference on Engineering and Applied Sciences (ISCEAS)",
+        type: "international-conference"
+    },
+    {
+        id: 129,
+        authors: "Ing-Chau Chang, Ssu-Ni Hung and Chin-En Yen",
+        year: 2016,
+        title: "On Design of A Dynamic Carpooling System Based on Vehicle Information Shared Through the VANET",
+        venue: "2016 IEEE International Conference on Systems, Man, and Cybernetics (SMC)",
+        type: "international-conference"
+    },
+    {
+        id: 130,
+        authors: "Ing-Chau Chang, Jacky Lo and Chin-En Yen",
+        year: 2016,
+        title: "SocialCode: A Credit-based Incentive Protocol to Stimulate Network-Coded Cooperative Content Distribution for Vehicular Nodes",
+        venue: "the Fifth International Multi-Conference on Engineering and Technology Innovation (IMETI2016)",
+        type: "international-conference"
+    },
+    {
+        id: 131,
+        authors: "Ing-Chau Chang, Ming-Han Hung, Ching-Ru Chang and Chin-En Yen",
+        year: 2017,
+        title: "NTR: an Efficient Trajectory-based Routing Protocol for the Vehicular Delay Tolerant Networks",
+        venue: "2017 IEEE International Conference on Systems, Man, and Cybernetics",
+        type: "international-conference"
+    },
+    {
+        id: 132,
+        authors: "Ing-Chau Chang and Ching-Ru Chang",
+        year: 2017,
+        title: "SATR: Socially-Aware Trajectory-based Routing in Vehicular Social Networks",
+        venue: "2017 IEEE 8th International Conference on Awareness Science and Technology (iCAST 2017)",
+        type: "international-conference"
+    },
+    {
+        id: 133,
+        authors: "Ing-Chau Chang, Peng-Jun Hsu, Yuan-Sheng Lin, Yu-Sheng Wu, Pin-Lin Chen, Xian-Feng Lin and Chin-En Yen",
+        year: 2018,
+        title: "Design and Implement an IoT Roadside Parking System based on Raspberry Pi 3 and BLE Mesh Network",
+        venue: "The 4th IEEE International Conference on Applied System Innovation 2018 (IEEE ICASI 2018)",
+        type: "international-conference"
+    },
+    {
+        id: 134,
+        authors: "Chin-En Yen, Tsai-Yuan Chung, Ing-Chau Chang, Cheng-Fong Chang, and Cheng-Ying Yang",
+        year: 2018,
+        title: "Performance Evaluation for the E-Learning System with On-line Social Support",
+        venue: "The 2018 International Conference on Information and Knowledge Engineering (IKE'18)",
+        pages: "156-159",
+        type: "international-conference"
+    },
+    {
+        id: 135,
+        authors: "Chin-En Yen and Ing-Chau Chang",
+        year: 2020,
+        title: "Nutritional Education and Promotion Healthy Eating Behaviors of Preschool Children through Computer Games",
+        venue: "1st International Workshop on Technology of AI and Wireless Advanced Networking: Dependable Computing and Communication (TAIWAN-DCC)",
+        type: "international-conference"
+    },
+    {
+        id: 136,
+        authors: "Ing-Chau Chang, Chi-Sheng Liao, Chin-En Yen",
+        year: 2020,
+        title: "The Energy-Aware Multi-UAV Dispatch and Handoff Algorithm for Maximizing the Event Communication Time in Disasters",
+        venue: "the 9th International Multi-Conference on Engineering and Technology Innovation 2020 (IMETI2020)",
+        type: "international-conference"
+    },
+    {
+        id: 137,
+        authors: "Ing-Chau Chang, Xun-Mei Kuo, Ya-Jing Song, Ping-Hao Liao, Wei-Rong Chen, Chunghui Kuo",
+        year: 2020,
+        title: "An Artificial Intelligence-based Proactive Bus Blind Spot Warning System for Motorcycles",
+        venue: "IEEE International Symposium on Computer, Consumer and Control (IS3C 2020)",
+        type: "international-conference"
+    },
+    {
+        id: 138,
+        authors: "Ing-Chau Chang, Wei-Chien Chang, Wei-Heng Liu, Yang Chen, Jia-Chang Ji, Ching Yu Liu",
+        year: 2021,
+        title: "Integration of Bluetooth Indoor Positioning and Multi-Floor Route Planning for an Online to Offline (O2O) Commerce System",
+        venue: "4th IEEE International Conference on Knowledge Innovation and Invention",
+        type: "international-conference"
+    },
+    {
+        id: 139,
+        authors: "Ing-Chau Chang, Cheng-Ying Yang, J. F. Yao, Chin-En Yen",
+        year: 2021,
+        title: "The Effects of Baby Massage on Physical Development of Infant",
+        venue: "2021 IEEE International Conference on Social Science and Intelligent Management (SSIM 2021)",
+        type: "international-conference"
+    },
+    {
+        id: 140,
+        authors: "Y. -S. Jheng, M. L. Wu, T. W. Yang, C. F. Chou and I. -C. Chang",
+        year: 2021,
+        title: "A Systematic Resource Management for VR Streaming on MECs",
+        venue: "2021 30th Wireless and Optical Communications Conference (WOCC)",
+        pages: "36-37",
+        doi: "10.1109/WOCC53213.2021.9603194",
+        type: "international-conference"
+    },
+    {
+        id: 141,
+        authors: "Y.-H. Wang, T. -W. Yang, C. -F. Chou and I. -C. Chang",
+        year: 2021,
+        title: "Wi-Fi DSAR: Wi-Fi based Indoor Localization using Denoising Supervised Autoencoder",
+        venue: "2021 30th Wireless and Optical Communications Conference (WOCC)",
+        pages: "188-192",
+        doi: "10.1109/WOCC53213.2021.9602896",
+        type: "international-conference"
+    },
+    {
+        id: 142,
+        authors: "Ing-Chau Chang, Chin-En Yen",
+        year: 2022,
+        title: "Application of Somatosensory Computer Game in Nutrition Education of Preschool Children",
+        venue: "the 2022 2nd IEEE International Conference on Social Sciences and Intelligence Management (IEEE SSIM 2022)",
+        type: "international-conference"
+    },
+    {
+        id: 143,
+        authors: "I. -C. Chang, C. -E. Yen and Y. -H. Sheu",
+        year: 2023,
+        title: "A Bluetooth Low Energy Indoor Positioning Algorithm for an Online to Offline Commerce System",
+        venue: "2023 International Conference on Consumer Electronics Taiwan (ICCE-Taiwan)",
+        pages: "597-598",
+        doi: "10.1109/ICCE-Taiwan58799.2023.10226856",
+        type: "international-conference"
+    },
+    {
+        id: 144,
+        authors: "Chin-En Yen, Men-Yi Li, Yu-Hsuan Hsieh, Yu-Cheng Chen, Chunghui Kuo, and Ing-Chau Chang",
+        year: 2024,
+        title: "A Time and Energy Efficient Multi-UAV Coverage Planning for the Search and Rescue Mission under Wind Fields",
+        venue: "the 7th International Conference on Knowledge Innovation and Invention 2024 (ICKII 2024)",
+        type: "international-conference"
+    },
+    {
+        id: 145,
+        authors: "Yu-Cheng Chen, Chunghui Kuo, Ing-Chau Chang",
+        year: 2024,
+        title: "Depth From Defocus By Integrating AI-Based Image Segmentation and Physical Optics",
+        venue: "the 6th Eurasia Conference on IoT, Communication and Engineering (ECICE 2024)",
+        type: "international-conference"
+    },
+    {
+        id: 146,
+        authors: "Chia-Li Chen, Ing-Chau Chang, Ya-Lan Chan, and Chin-En Yen",
+        year: 2024,
+        title: "The Effect of Computer Games on Preschool Children's Learning Attention and Interest",
+        venue: "2024 The 4th IEEE International Conference on Social Sciences and Intelligence Management (IEEE SSIM 2024)",
+        type: "international-conference"
+    },
+    {
+        id: 147,
+        authors: "Ta-Wei Yang, Ting-Chun Lin, Guan-Yu Lai, Chu-Hsin Chen, Ing-Chau Chang, and Cheng-Fu Chou",
+        year: 2025,
+        title: "ConvTransNeXt: A Hybrid Convolutional-Transformer Model for Multi-Label Retinal Disease Classification",
+        venue: "The IEEE Engineering in Medicine and Biology Conference (EMBC)",
+        type: "international-conference"
+    },
+    {
+        id: 148,
+        authors: "Ing-Chau Chang, Yu-Chiao Chang, Chunghui Kuo, and Chin-En Yen",
+        year: 2025,
+        title: "AI-Enhanced Mono-View Geometry for Digital Twin 3D Visualization in Autonomous Driving",
+        venue: "the 8th International Conference on Knowledge Innovation and Invention 2025 (ICKII 2025)",
+        doi: "https://doi.org/10.3390/engproc2025120006",
+        type: "international-conference"
+    },
+    {
+        id: 149,
+        authors: "Ing-Chau Chang, Yu-Cheng Chen, Yu-Sen Wang, Chunghui Kuo, and Chin-En Yen",
+        year: 2025,
+        title: "A Monocular Defocus Depth Estimation Algorithm Combining AI-Based Image Segmentation and Physical Optics",
+        venue: "The 21st International Conference on Intelligent Information Hiding and Multimedia Signal Processing (IIHMSP 2025)",
+        type: "international-conference"
+    },
+    {
+        id: 150,
+        authors: "Shane Kuo and Ing-Chau Chang",
+        year: 2026,
+        title: "Evaluating Image Compression Potential for Physical World Building",
+        venue: "2026 IEEE 16th Annual Computing and Communication Workshop and Conference (CCWC 2026)",
+        type: "international-conference"
+    },
+    {
+        id: 151,
+        authors: "Ya-Jing Song, Ing-Chau Chang and Chin-En Yen",
+        year: 2026,
+        title: "SAMRL: A Self-Attention Meta-Reinforcement-Learning-based Multi-Task Offloading Strategy",
+        venue: "The 40-th International Conference on Advanced Information Networking and Applications 2026- Workshop-M2EC-2026: The 7-th International Workshop on Multi-Clouds and Mobile Edge Computing (M2EC-2026)",
+        type: "international-conference"
     }
 ];
 
-// 本地會議論文 (52篇)
+// 本地會議論文 (79篇)
 export const localConferences: Publication[] = [
     {
         id: 201,
@@ -1157,6 +1594,214 @@ export const localConferences: Publication[] = [
         year: 2013,
         title: "以信用激勵網路編碼使用於合作式內容分享",
         venue: "NCS 2013 全國計算機會議",
+        type: "local-conference"
+    },
+    {
+        id: 253,
+        authors: "張英超、林登勇、陳奕安、辛忠翰、韓宗曄、陳新弘、洪似妮",
+        year: 2014,
+        title: "智慧型餐廳排隊點餐IQA演算法與Android APP實作",
+        venue: "TANET 2014 臺灣網際網路研討會",
+        type: "local-conference"
+    },
+    {
+        id: 254,
+        authors: "張英超、洪似妮",
+        year: 2015,
+        title: "基於車載網路分享車輛資訊的動態共乘系統",
+        venue: "2015數位科技與創新管理研討會",
+        type: "local-conference"
+    },
+    {
+        id: 255,
+        authors: "張英超、黃俊豪、郭耕欣、潘凱文、陳俊賢、廖啟盛",
+        year: 2015,
+        title: "基於車載網路路況分享之Ubike任你騎App",
+        venue: "MC 2015 第二十屆行動計算研討會",
+        type: "local-conference"
+    },
+    {
+        id: 256,
+        authors: "張英超、洪似妮、廖啟盛、林佳陞",
+        year: 2016,
+        title: "基於車輛網路分享的車輛資訊之動態共乘系統",
+        venue: "International Conference on Advanced Information Technologies (AIT) 2016",
+        type: "local-conference"
+    },
+    {
+        id: 257,
+        authors: "張英超、章晴茹",
+        year: 2016,
+        title: "車輛社群網路上具社會意識的軌跡路由協定",
+        venue: "MC 2016 第二十一屆行動計算研討會",
+        type: "local-conference"
+    },
+    {
+        id: 258,
+        authors: "張英超、劉泳松、蔡承恩、藍淳鈺",
+        year: 2016,
+        title: "MatchPon:優惠媒合平台",
+        venue: "MC2016 第二十一屆行動計算研討會",
+        type: "local-conference"
+    },
+    {
+        id: 259,
+        authors: "章晴茹、張英超、廖啟盛",
+        year: 2017,
+        title: "車載社群網路中一個擁有社會意識以軌跡為基礎的路由協定",
+        venue: "11th International Conference on Advanced Information Technologies",
+        type: "local-conference"
+    },
+    {
+        id: 260,
+        authors: "Ing-Chau Chang, Ching-Ju Chang and Chi-Sheng Liao",
+        year: 2017,
+        title: "Socially-Aware Trajectory-based Routing in Vehicular Social Networks",
+        venue: "第二十二屆行動計算研討會(MC2017)",
+        type: "local-conference"
+    },
+    {
+        id: 261,
+        authors: "徐鵬鈞、林原生、吳昱陞、陳品霖、林憲鋒、張英超",
+        year: 2017,
+        title: "以Pi3建構BLE網狀網路的路邊停車系統",
+        venue: "TANET 2017 臺灣網際網路研討會",
+        type: "local-conference"
+    },
+    {
+        id: 262,
+        authors: "張英超，廖啟盛",
+        year: 2018,
+        title: "最大化兩層式無人機-車輛隨意網路生命期間之能量感知無人機派遣演算法",
+        venue: "2018網路與資訊安全研討會",
+        type: "local-conference"
+    },
+    {
+        id: 263,
+        authors: "張英超，廖啟盛",
+        year: 2019,
+        title: "災難時最大化鏈結通訊時間的電力感知多台無人機派遣與換手演算法",
+        venue: "2019 National Symposium on System Science and Engineering",
+        type: "local-conference"
+    },
+    {
+        id: 264,
+        authors: "張偉健、劉韋亨、陳揚、紀佳昌、劉靜瑜、張英超",
+        year: 2019,
+        title: "結合藍牙室內定位與導航的O2O線上到線下營銷系統",
+        venue: "第二十四屆行動計算研討會(MC2019)",
+        type: "local-conference"
+    },
+    {
+        id: 265,
+        authors: "張英超、郭薰鎂、陳威融、宋亞靜、廖品豪",
+        year: 2020,
+        title: "以人工智慧辨識機車進入大車盲點之主動預警系統",
+        venue: "2020智慧運算論壇",
+        type: "local-conference"
+    },
+    {
+        id: 266,
+        authors: "嚴金恩、張英超",
+        year: 2020,
+        title: "電腦遊戲對幼兒營養教育和健康飲食行為之研究",
+        venue: "2020 智慧運算論壇",
+        type: "local-conference"
+    },
+    {
+        id: 267,
+        authors: "鄭安修、張英超",
+        year: 2021,
+        title: "風速與電量感知多台UAV派遣與換手演算法與斷線重建 3R演算法",
+        venue: "2021全國智慧運算會議",
+        type: "local-conference"
+    },
+    {
+        id: 268,
+        authors: "陳嘉莉、張英超、嚴金恩",
+        year: 2022,
+        title: "體感電腦遊戲在幼兒教育營養領域之初探",
+        venue: "2022 智慧運算會議",
+        type: "local-conference"
+    },
+    {
+        id: 269,
+        authors: "張浩富、徐銘聰、王文甫、陳奕維、張英超",
+        year: 2022,
+        title: "結合雲端運算與人工智慧影像辨識的快速無人機階層式搜尋系統",
+        venue: "2022智慧運算會議",
+        type: "local-conference"
+    },
+    {
+        id: 270,
+        authors: "楊辰彬、張英超",
+        year: 2022,
+        title: "DQ-Grid一種基於車輛軌跡與方向性Q學習網格的車載路由演算法",
+        venue: "第十七屆無線、隨意及感測網路研討會",
+        type: "local-conference"
+    },
+    {
+        id: 271,
+        authors: "張英超、張育祥",
+        year: 2023,
+        title: "基於DRL與RF之封包路由框架",
+        venue: "2023資通電應用科技研討會",
+        type: "local-conference"
+    },
+    {
+        id: 272,
+        authors: "李門益、嚴金恩、張英超",
+        year: 2023,
+        title: "考慮風向與風力變化的高效率多台搜救無人機之區域覆蓋規劃",
+        venue: "2023智慧運算論壇",
+        type: "local-conference"
+    },
+    {
+        id: 273,
+        authors: "張英超、嚴金恩",
+        year: 2023,
+        title: "體感遊戲對幼兒學習興趣及其教育之應用",
+        venue: "2023智慧運算論壇",
+        type: "local-conference"
+    },
+    {
+        id: 274,
+        authors: "Song Ya-Jing and Chang Ing-Chau",
+        year: 2023,
+        title: "ITAR-DRL:基於深度強化學習之交通感知路由協議",
+        venue: "第二十七屆行動計算研討會(MC2023)",
+        type: "local-conference"
+    },
+    {
+        id: 275,
+        authors: "陳佑丞、郭仲輝、張英超",
+        year: 2024,
+        title: "結合AI圖像分割與物理光學之失焦深度演算法",
+        venue: "2024台灣網際網路演討會",
+        type: "local-conference"
+    },
+    {
+        id: 276,
+        authors: "張語喬，郭仲輝，張英超",
+        year: 2025,
+        title: "結合人工智慧與鏡頭光學以單目影像實現自動駕駛的數位孿生3D空間可視化生活",
+        venue: "2025 數位生活科技研討會",
+        type: "local-conference"
+    },
+    {
+        id: 277,
+        authors: "鍾明勳，郭仲輝，張英超",
+        year: 2025,
+        title: "基於電腦視覺在Duckiebot自走車的自動駕駛車道置中技術",
+        venue: "第十九屆智慧生活科技研討會",
+        type: "local-conference"
+    },
+    {
+        id: 278,
+        authors: "宋亞靜，張英超",
+        year: 2025,
+        title: "SAMRL:基於自注意力機制之元強化學習多任務卸載策略",
+        venue: "2025 Workshop on Wireless Ad-Hoc and Sensor Networks (WASN 2025)",
         type: "local-conference"
     }
 ];

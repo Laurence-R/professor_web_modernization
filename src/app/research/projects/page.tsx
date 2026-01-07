@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Folder, Calendar, DollarSign, CheckCircle, Clock } from "lucide-react";
+import { Folder, Calendar, DollarSign, CheckCircle, Clock, Briefcase, Target, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 
     // 統計資料
     const stats = useMemo(() => {
-        const totalBudget = mainProjects.reduce((sum, p) => sum + (p.budget || 0), 0);
+        const totalBudget = mainProjects.reduce((sum: number, p: any) => sum + (p.budget || 0), 0);
         const ongoing = allProjects.filter(p => p.status === "執行中").length;
         const completed = allProjects.filter(p => p.status === "已結案").length;
 
@@ -50,132 +50,190 @@ export default function ProjectsPage() {
     }, [filteredProjects]);
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+        <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20">
             <div className="container mx-auto px-4 max-w-7xl">
                 {/* Header */}
-                <div className="mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center mb-16"
+                >
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
+                        className="inline-block mb-6"
+                    >
+                        <Briefcase className="h-16 w-16 text-green-600 dark:text-green-400" />
+                    </motion.div>
+                    <h1 className="text-5xl font-bold bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">
                         研究計畫
                     </h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-400">
+                    <p className="text-2xl text-gray-600 dark:text-gray-400 mb-4">
+                        Research Projects
+                    </p>
+                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                         國科會計畫與大專生專題研究
                     </p>
-                </div>
+                </motion.div>
 
                 {/* 統計卡片 */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                    <Card className="p-6">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                                    總計畫數
-                                </p>
-                                <p className="text-3xl font-bold text-gray-900 dark:text-white">
-                                    {stats.total}
-                                </p>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+                >
+                    <motion.div whileHover={{ scale: 1.05, rotate: 1 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-6 border-2 hover:border-blue-300 dark:hover:border-blue-700 transition-all shadow-lg hover:shadow-xl">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                                        總計畫數
+                                    </p>
+                                    <p className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                                        {stats.total}
+                                    </p>
+                                </div>
+                                <div className="p-3 bg-blue-100 dark:bg-blue-900/50 rounded-xl">
+                                    <Folder className="h-10 w-10 text-blue-600 dark:text-blue-400" />
+                                </div>
                             </div>
-                            <Folder className="h-10 w-10 text-blue-600 dark:text-blue-400" />
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
 
-                    <Card className="p-6">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                                    主持計畫
-                                </p>
-                                <p className="text-3xl font-bold text-gray-900 dark:text-white">
-                                    {stats.main}
-                                </p>
+                    <motion.div whileHover={{ scale: 1.05, rotate: -1 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-6 border-2 hover:border-green-300 dark:hover:border-green-700 transition-all shadow-lg hover:shadow-xl">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                                        主持計畫
+                                    </p>
+                                    <p className="text-4xl font-bold bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
+                                        {stats.main}
+                                    </p>
+                                </div>
+                                <div className="p-3 bg-green-100 dark:bg-green-900/50 rounded-xl">
+                                    <CheckCircle className="h-10 w-10 text-green-600 dark:text-green-400" />
+                                </div>
                             </div>
-                            <CheckCircle className="h-10 w-10 text-green-600 dark:text-green-400" />
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
 
-                    <Card className="p-6">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                                    指導專題
-                                </p>
-                                <p className="text-3xl font-bold text-gray-900 dark:text-white">
-                                    {stats.student}
-                                </p>
+                    <motion.div whileHover={{ scale: 1.05, rotate: 1 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-6 border-2 hover:border-purple-300 dark:hover:border-purple-700 transition-all shadow-lg hover:shadow-xl">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                                        指導專題
+                                    </p>
+                                    <p className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
+                                        {stats.student}
+                                    </p>
+                                </div>
+                                <div className="p-3 bg-purple-100 dark:bg-purple-900/50 rounded-xl">
+                                    <Target className="h-10 w-10 text-purple-600 dark:text-purple-400" />
+                                </div>
                             </div>
-                            <Clock className="h-10 w-10 text-purple-600 dark:text-purple-400" />
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
 
-                    <Card className="p-6">
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                                    總經費
-                                </p>
-                                <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                                    {(stats.totalBudget / 1000000).toFixed(1)}M
-                                </p>
+                    <motion.div whileHover={{ scale: 1.05, rotate: -1 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-6 border-2 hover:border-orange-300 dark:hover:border-orange-700 transition-all shadow-lg hover:shadow-xl">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                                        總經費
+                                    </p>
+                                    <p className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
+                                        {(stats.totalBudget / 1000000).toFixed(1)}M
+                                    </p>
+                                </div>
+                                <div className="p-3 bg-orange-100 dark:bg-orange-900/50 rounded-xl">
+                                    <DollarSign className="h-10 w-10 text-orange-600 dark:text-orange-400" />
+                                </div>
                             </div>
-                            <DollarSign className="h-10 w-10 text-orange-600 dark:text-orange-400" />
-                        </div>
-                    </Card>
-                </div>
+                        </Card>
+                    </motion.div>
+                </motion.div>
 
                 {/* 篩選按鈕 */}
-                <Card className="p-6 mb-8">
-                    <div className="flex flex-wrap gap-3">
-                        <Button
-                            variant={selectedType === "all" ? "default" : "outline"}
-                            onClick={() => setSelectedType("all")}
-                        >
-                            全部計畫 ({stats.total})
-                        </Button>
-                        <Button
-                            variant={selectedType === "主持計畫" ? "default" : "outline"}
-                            onClick={() => setSelectedType("主持計畫")}
-                        >
-                            主持計畫 ({stats.main})
-                        </Button>
-                        <Button
-                            variant={selectedType === "指導專題" ? "default" : "outline"}
-                            onClick={() => setSelectedType("指導專題")}
-                        >
-                            指導專題 ({stats.student})
-                        </Button>
-                    </div>
-                </Card>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                    <Card className="p-6 mb-12 border-2 shadow-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur">
+                        <div className="flex flex-wrap gap-3">
+                            <Button
+                                variant={selectedType === "all" ? "default" : "outline"}
+                                onClick={() => setSelectedType("all")}
+                            >
+                                全部計畫 ({stats.total})
+                            </Button>
+                            <Button
+                                variant={selectedType === "主持計畫" ? "default" : "outline"}
+                                onClick={() => setSelectedType("主持計畫")}
+                            >
+                                主持計畫 ({stats.main})
+                            </Button>
+                            <Button
+                                variant={selectedType === "指導專題" ? "default" : "outline"}
+                                onClick={() => setSelectedType("指導專題")}
+                            >
+                                指導專題 ({stats.student})
+                            </Button>
+                        </div>
+                    </Card>
+                </motion.div>
 
                 {/* 計畫時間軸 */}
                 <div className="space-y-12">
                     {projectsByYear.map(([year, projects]) => (
-                        <div key={year}>
+                        <motion.div
+                            key={year}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 dark:bg-blue-500 text-white font-bold text-xl">
+                                <motion.div
+                                    whileHover={{ scale: 1.1, rotate: 5 }}
+                                    className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-green-600 to-emerald-600 text-white font-bold text-xl shadow-lg"
+                                >
                                     {year}
-                                </div>
-                                <div className="flex-1 h-0.5 bg-gray-300 dark:bg-gray-700"></div>
+                                </motion.div>
+                                <div className="flex-1 h-1 bg-gradient-to-r from-green-600 via-emerald-400 to-transparent"></div>
                             </div>
 
-                            <div className="space-y-4 ml-20">
+                            <div className="space-y-4 ml-24">
                                 {projects.map((project, index) => (
                                     <motion.div
                                         key={project.id}
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: index * 0.1 }}
+                                        transition={{ delay: index * 0.05 }}
+                                        whileHover={{ x: 8, scale: 1.02 }}
                                     >
-                                        <Card className="p-6 hover:shadow-lg transition-shadow">
+                                        <Card className="p-6 hover:shadow-2xl transition-all duration-300 border-l-4 border-l-green-500 group">
                                             <div className="flex items-start justify-between mb-3">
                                                 <div className="flex-1">
-                                                    <div className="flex items-center gap-3 mb-2">
-                                                        <Badge variant={project.type === "主持計畫" ? "default" : "secondary"}>
+                                                    <div className="flex items-center gap-3 mb-3">
+                                                        <Badge
+                                                            variant={project.type === "主持計畫" ? "default" : "secondary"}
+                                                            className={project.type === "主持計畫" ? "bg-gradient-to-r from-green-600 to-emerald-600" : ""}
+                                                        >
                                                             {project.type}
                                                         </Badge>
-                                                        <Badge variant={project.status === "執行中" ? "default" : "outline"}>
+                                                        <Badge
+                                                            variant={project.status === "執行中" ? "default" : "outline"}
+                                                            className={project.status === "執行中" ? "bg-orange-600 animate-pulse" : ""}
+                                                        >
                                                             {project.status}
                                                         </Badge>
                                                     </div>
-                                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
                                                         {project.name}
                                                     </h3>
                                                 </div>
@@ -213,32 +271,9 @@ export default function ProjectsPage() {
                                     </motion.div>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-
-                {/* 獲獎紀錄 */}
-                <Card className="mt-12 p-8 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20">
-                    <div className="flex items-start gap-4">
-                        <div className="p-3 bg-yellow-100 dark:bg-yellow-900 rounded-full">
-                            <CheckCircle className="h-8 w-8 text-yellow-600 dark:text-yellow-400" />
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                                研究成果獲獎
-                            </h3>
-                            <p className="text-gray-700 dark:text-gray-300 mb-2">
-                                <span className="font-bold underline decoration-2 decoration-blue-600">張英超</span>、戴宏達、葉澧漢、張小徽、謝東霖
-                            </p>
-                            <p className="text-gray-600 dark:text-gray-400 mb-1">
-                                「基於交換即時路況之動態節能路徑規劃演算法設計與 Android 平台上的實作」
-                            </p>
-                            <p className="text-sm text-gray-500 dark:text-gray-500">
-                                🏆 2012 全國運輸節能科技應用創意競賽 第一名（2012/07/17）
-                            </p>
-                        </div>
-                    </div>
-                </Card>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ChevronDown, ChevronUp, FileText, Award } from "lucide-react";
+import { Search, ChevronDown, ChevronUp, FileText, Award, BookOpen, Globe, Sparkles } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -96,173 +96,206 @@ export default function PublicationsPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20">
             <div className="container mx-auto px-4 max-w-7xl">
                 {/* Header */}
-                <div className="mb-12">
-                    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-center mb-16"
+                >
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
+                        className="inline-block mb-6"
+                    >
+                        <BookOpen className="h-16 w-16 text-blue-600 dark:text-blue-400" />
+                    </motion.div>
+                    <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">
                         論文著作
                     </h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-400">
-                        期刊論文、會議論文與學位論文
+                    <p className="text-2xl text-gray-600 dark:text-gray-400 mb-4">
+                        Publications
                     </p>
-                </div>
+                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                        期刊論文、國際會議論文與國內會議論文集
+                    </p>
+                </motion.div>
 
                 {/* 統計卡片 */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-                    <Card className="p-4">
-                        <div className="text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12"
+                >
+                    <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-4 text-center border-2 hover:border-blue-300 dark:hover:border-blue-700 transition-all shadow-lg hover:shadow-xl">
+                            <Sparkles className="h-5 w-5 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
                             <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">
                                 總論文數
                             </p>
-                            <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                            <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                                 {stats.total}
                             </p>
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
 
-                    <Card className="p-4">
-                        <div className="text-center">
+                    <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-4 text-center border-2 hover:border-indigo-300 dark:hover:border-indigo-700 transition-all shadow-lg hover:shadow-xl">
+                            <Award className="h-5 w-5 text-indigo-600 dark:text-indigo-400 mx-auto mb-2" />
                             <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">
                                 期刊論文
                             </p>
-                            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                            <p className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">
                                 {stats.journal}
                             </p>
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
 
-                    <Card className="p-4">
-                        <div className="text-center">
+                    <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-4 text-center border-2 hover:border-green-300 dark:hover:border-green-700 transition-all shadow-lg hover:shadow-xl">
+                            <Globe className="h-5 w-5 text-green-600 dark:text-green-400 mx-auto mb-2" />
                             <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">
                                 國際會議
                             </p>
-                            <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                            <p className="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
                                 {stats.intlConf}
                             </p>
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
 
-                    <Card className="p-4">
-                        <div className="text-center">
+                    <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-4 text-center border-2 hover:border-purple-300 dark:hover:border-purple-700 transition-all shadow-lg hover:shadow-xl">
+                            <FileText className="h-5 w-5 text-purple-600 dark:text-purple-400 mx-auto mb-2" />
                             <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">
                                 國內會議
                             </p>
-                            <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                            <p className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
                                 {stats.localConf}
                             </p>
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
 
-                    <Card className="p-4">
-                        <div className="text-center">
+                    <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-4 text-center border-2 hover:border-orange-300 dark:hover:border-orange-700 transition-all shadow-lg hover:shadow-xl">
+                            <Award className="h-5 w-5 text-orange-600 dark:text-orange-400 mx-auto mb-2" />
                             <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">
                                 SCI/SCIE
                             </p>
-                            <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                            <p className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent">
                                 {stats.sci}
                             </p>
-                        </div>
-                    </Card>
+                        </Card>
+                    </motion.div>
 
-                    <Card className="p-4">
-                        <div className="text-center">
+                    <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
+                        <Card className="p-4 text-center border-2 hover:border-gray-300 dark:hover:border-gray-700 transition-all shadow-lg hover:shadow-xl">
+                            <BookOpen className="h-5 w-5 text-gray-600 dark:text-gray-400 mx-auto mb-2" />
                             <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">
                                 研究年限
                             </p>
-                            <p className="text-sm font-bold text-gray-900 dark:text-white">
+                            <p className="text-lg font-bold text-gray-900 dark:text-white">
                                 {stats.years}
                             </p>
-                        </div>
-                    </Card>
-                </div>
+                        </Card>
+                    </motion.div>
+                </motion.div>
 
                 {/* 搜尋與篩選 */}
-                <Card className="p-6 mb-8">
-                    <div className="space-y-4">
-                        {/* 搜尋框 */}
-                        <div className="relative">
-                            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                            <Input
-                                type="text"
-                                placeholder="搜尋標題、作者或期刊名稱..."
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                                className="pl-10"
-                            />
-                        </div>
-
-                        {/* 篩選按鈕 */}
-                        <div className="flex flex-wrap gap-3">
-                            {/* 論文類型篩選 */}
-                            <div className="flex items-center gap-2">
-                                <span className="text-sm text-gray-600 dark:text-gray-400">類型:</span>
-                                <select
-                                    value={selectedType}
-                                    onChange={(e) => setSelectedType(e.target.value as any)}
-                                    className="px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
-                                >
-                                    <option value="all">全部類型</option>
-                                    <option value="journal">期刊論文</option>
-                                    <option value="international-conference">國際會議</option>
-                                    <option value="local-conference">國內會議</option>
-                                    <option value="thesis">學位論文</option>
-                                </select>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                    <Card className="p-6 mb-8 border-2 shadow-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur">
+                        <div className="space-y-4">
+                            {/* 搜尋框 */}
+                            <div className="relative">
+                                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                                <Input
+                                    type="text"
+                                    placeholder="搜尋標題、作者或期刊名稱..."
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    className="pl-10"
+                                />
                             </div>
 
-                            {/* 年份篩選 */}
-                            <div className="flex items-center gap-2">
-                                <span className="text-sm text-gray-600 dark:text-gray-400">年份:</span>
-                                <select
-                                    value={selectedYear}
-                                    onChange={(e) => setSelectedYear(e.target.value)}
-                                    className="px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
-                                >
-                                    <option value="all">全部</option>
-                                    {years.map(year => (
-                                        <option key={year} value={year}>{year}</option>
-                                    ))}
-                                </select>
+                            {/* 篩選按鈕 */}
+                            <div className="flex flex-wrap gap-3">
+                                {/* 論文類型篩選 */}
+                                <div className="flex items-center gap-2">
+                                    <span className="text-sm text-gray-600 dark:text-gray-400">類型:</span>
+                                    <select
+                                        value={selectedType}
+                                        onChange={(e) => setSelectedType(e.target.value as any)}
+                                        className="px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
+                                    >
+                                        <option value="all">全部類型</option>
+                                        <option value="journal">期刊論文</option>
+                                        <option value="international-conference">國際會議</option>
+                                        <option value="local-conference">國內會議</option>
+                                        <option value="thesis">學位論文</option>
+                                    </select>
+                                </div>
+
+                                {/* 年份篩選 */}
+                                <div className="flex items-center gap-2">
+                                    <span className="text-sm text-gray-600 dark:text-gray-400">年份:</span>
+                                    <select
+                                        value={selectedYear}
+                                        onChange={(e) => setSelectedYear(e.target.value)}
+                                        className="px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
+                                    >
+                                        <option value="all">全部</option>
+                                        {years.map(year => (
+                                            <option key={year} value={year}>{year}</option>
+                                        ))}
+                                    </select>
+                                </div>
+
+                                {/* 索引篩選 */}
+                                <div className="flex items-center gap-2">
+                                    <span className="text-sm text-gray-600 dark:text-gray-400">索引:</span>
+                                    <select
+                                        value={selectedIndex}
+                                        onChange={(e) => setSelectedIndex(e.target.value)}
+                                        className="px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
+                                    >
+                                        <option value="all">全部</option>
+                                        {indexTypes.map(idx => (
+                                            <option key={idx} value={idx}>{idx}</option>
+                                        ))}
+                                    </select>
+                                </div>
+
+                                {/* 重置按鈕 */}
+                                {(searchTerm || selectedType !== "all" || selectedYear !== "all" || selectedIndex !== "all") && (
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        onClick={() => {
+                                            setSearchTerm("");
+                                            setSelectedType("all");
+                                            setSelectedYear("all");
+                                            setSelectedIndex("all");
+                                        }}
+                                    >
+                                        重置篩選
+                                    </Button>
+                                )}
                             </div>
 
-                            {/* 索引篩選 */}
-                            <div className="flex items-center gap-2">
-                                <span className="text-sm text-gray-600 dark:text-gray-400">索引:</span>
-                                <select
-                                    value={selectedIndex}
-                                    onChange={(e) => setSelectedIndex(e.target.value)}
-                                    className="px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm"
-                                >
-                                    <option value="all">全部</option>
-                                    {indexTypes.map(idx => (
-                                        <option key={idx} value={idx}>{idx}</option>
-                                    ))}
-                                </select>
+                            {/* 結果數量 */}
+                            <div className="text-sm text-gray-600 dark:text-gray-400">
+                                顯示 {filteredPublications.length} / {stats.total} 篇論文
                             </div>
-
-                            {/* 重置按鈕 */}
-                            {(searchTerm || selectedType !== "all" || selectedYear !== "all" || selectedIndex !== "all") && (
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    onClick={() => {
-                                        setSearchTerm("");
-                                        setSelectedType("all");
-                                        setSelectedYear("all");
-                                        setSelectedIndex("all");
-                                    }}
-                                >
-                                    重置篩選
-                                </Button>
-                            )}
                         </div>
-
-                        {/* 結果數量 */}
-                        <div className="text-sm text-gray-600 dark:text-gray-400">
-                            顯示 {filteredPublications.length} / {stats.total} 篇論文
-                        </div>
-                    </div>
-                </Card>
+                    </Card>
+                </motion.div>
 
                 {/* 論文列表 */}
                 <div className="space-y-4">
