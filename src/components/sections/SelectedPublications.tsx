@@ -9,45 +9,40 @@ import { Button } from "@/components/ui/button";
 
 const publications = [
     {
-        title: "Efficient Resource Allocation for 5G Network Slicing",
-        authors: "Your Name, Co-Author 1, Co-Author 2",
-        venue: "IEEE Transactions on Mobile Computing",
-        year: 2024,
-        citations: 156,
+        title: "HCoP-B: A Hierarchical Care-of Prefix with BUT Scheme for Nested Mobile Networks",
+        authors: "Ing-Chau Chang and Chia-Hao Chou",
+        venue: "IEEE Trans. on Vehicular Technology",
+        volume: "58",
+        issue: "6",
+        pages: "2942-2965",
+        year: 2009,
+        impactFactor: "7.1",
+        rank: "41/368, Q1 (Telecommunications)",
         type: "Journal",
+        indexes: ["SCI"],
+        nscProject: "NSC96-2221-E-018-009",
         links: {
             pdf: "#",
-            doi: "https://doi.org/10.1109/example",
+            doi: "#",
         },
-        tags: ["5G", "Network Slicing", "Optimization"],
-    },
-    {
-        title: "Secure and Privacy-Preserving Protocol for IoT Networks",
-        authors: "Your Name, Co-Author 3, Co-Author 4",
-        venue: "ACM MobiCom 2024",
-        year: 2024,
-        citations: 89,
-        type: "Conference",
-        links: {
-            pdf: "#",
-            doi: "https://doi.org/10.1145/example",
-        },
-        tags: ["IoT", "Security", "Privacy"],
-    },
-    {
-        title: "Machine Learning-Based Network Traffic Prediction",
-        authors: "Your Name, Co-Author 5",
-        venue: "IEEE Journal on Selected Areas in Communications",
-        year: 2023,
-        citations: 234,
-        type: "Journal",
-        links: {
-            pdf: "#",
-            doi: "https://doi.org/10.1109/example2",
-        },
-        tags: ["ML", "Traffic Prediction", "QoS"],
+        tags: ["NEMO", "Nested Mobile Networks", "Handoff", "Telecommunications"],
     },
 ];
+
+// 高亮作者名稱
+const highlightAuthor = (authors: string) => {
+    const parts = authors.split(/(Ing-Chau Chang|張英超)/gi);
+    return parts.map((part, index) => {
+        if (part.match(/(Ing-Chau Chang|張英超)/i)) {
+            return (
+                <span key={index} className="font-bold underline decoration-2 decoration-blue-600 dark:decoration-blue-400">
+                    {part}
+                </span>
+            );
+        }
+        return <span key={index}>{part}</span>;
+    });
+};
 
 export function SelectedPublications() {
     return (
@@ -71,7 +66,7 @@ export function SelectedPublications() {
                     </p>
                 </motion.div>
 
-                <div className="max-w-4xl mx-auto space-y-6">
+                <div className="grid gap-6 md:gap-8 max-w-4xl mx-auto">
                     {publications.map((pub, index) => (
                         <motion.div
                             key={index}
@@ -82,34 +77,61 @@ export function SelectedPublications() {
                         >
                             <Card className="hover:shadow-lg transition-shadow duration-300">
                                 <CardHeader>
-                                    <div className="flex items-start justify-between gap-4">
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2 mb-2">
-                                                <Badge variant={pub.type === "Journal" ? "default" : "secondary"}>
-                                                    {pub.type}
-                                                </Badge>
-                                                <Badge variant="outline" className="gap-1">
-                                                    <Award className="h-3 w-3" />
-                                                    {pub.citations} citations
-                                                </Badge>
-                                            </div>
-                                            <CardTitle className="text-xl mb-2 leading-tight">
-                                                {pub.title}
-                                            </CardTitle>
-                                            <CardDescription className="text-base">
-                                                {pub.authors}
-                                            </CardDescription>
-                                        </div>
+                                    <div className="flex flex-wrap gap-2 mb-3">
+                                        <Badge variant="default">
+                                            期刊論文
+                                        </Badge>
+                                        {pub.indexes?.map((idx, i) => (
+                                            <Badge key={i} variant="outline" className="gap-1">
+                                                <Award className="h-3 w-3" />
+                                                {idx}
+                                            </Badge>
+                                        ))}
+                                        {pub.impactFactor && (
+                                            <Badge variant="destructive" className="gap-1">
+                                                IF: {pub.impactFactor}
+                                            </Badge>
+                                        )}
                                     </div>
+                                    <CardTitle className="text-xl mb-2 leading-tight">
+                                        {pub.title}
+                                    </CardTitle>
+                                    <CardDescription className="text-base">
+                                        {highlightAuthor(pub.authors)}
+                                    </CardDescription>
                                 </CardHeader>
                                 <CardContent>
                                     <div className="space-y-4">
-                                        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                        <div className="flex items-center flex-wrap gap-2 text-sm text-gray-600 dark:text-gray-400">
                                             <FileText className="h-4 w-4" />
                                             <span className="font-medium">{pub.venue}</span>
+                                            {pub.volume && (
+                                                <>
+                                                    <span>•</span>
+                                                    <span>Vol.{pub.volume}, No.{pub.issue}</span>
+                                                </>
+                                            )}
+                                            {pub.pages && (
+                                                <>
+                                                    <span>•</span>
+                                                    <span>pp.{pub.pages}</span>
+                                                </>
+                                            )}
                                             <span>•</span>
                                             <span>{pub.year}</span>
                                         </div>
+
+                                        {pub.rank && (
+                                            <div className="text-sm text-gray-700 dark:text-gray-300">
+                                                <span className="font-medium">Rank:</span> {pub.rank}
+                                            </div>
+                                        )}
+
+                                        {pub.nscProject && (
+                                            <div className="text-sm text-gray-600 dark:text-gray-400">
+                                                <span className="font-medium">國科會計畫:</span> {pub.nscProject}
+                                            </div>
+                                        )}
 
                                         <div className="flex flex-wrap gap-2">
                                             {pub.tags.map((tag, tagIndex) => (
