@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Github, GraduationCap, BookOpen, Briefcase, Award } from "lucide-react";
+import { Mail, MapPin, BookOpen, Briefcase, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -78,13 +78,20 @@ export function HeroSection() {
                                     Email 聯絡
                                 </a>
                             </Button>
-                            <Button size="lg" variant="outline" className="gap-2 cursor-pointer">
+                            <Button size="lg" variant="outline" className="gap-2 cursor-pointer" asChild>
                                 <a
                                     href="https://ieeexplore.ieee.org/author/37640555800"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    className="flex items-center gap-2"
                                 >
-                                    <GraduationCap className="h-4 w-4" />
+                                    <Image
+                                        src="/IEEE_logo.svg"
+                                        alt="IEEE"
+                                        width={30}
+                                        height={30}
+                                        className="h-8 w-8"
+                                    />
                                     IEEE Xplore
                                 </a>
                             </Button>
